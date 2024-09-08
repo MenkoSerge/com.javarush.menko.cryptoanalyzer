@@ -4,6 +4,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MainApp {
     public static void main(String[] args) {
-      Massage.main(args);
+    Massage.userMassage();
+
     }
 }

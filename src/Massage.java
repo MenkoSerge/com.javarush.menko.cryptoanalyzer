@@ -1,7 +1,8 @@
+import java.security.PublicKey;
 import java.util.Scanner;
 
 public class Massage {
-    public static void main(String[] userMassage) {
+    public static String userMassage() {
         System.out.println("Привет мой друг, расскажи что мы делаем?\n" +
                 " 1. Шифруем \n" +
                 " 2. Расшифровываем \n" +
@@ -11,5 +12,17 @@ public class Massage {
 
         Scanner console = new Scanner(System.in);
         String userAnswer = console.nextLine();
+
+
+        if (userAnswer.contains("1")){
+            System.out.println("Отличный выбор, начинаем шифрование...");
+        } else if (userAnswer.contains("2")){
+            System.out.println("Отлично, давай расшифруем...");
+        } else if (userAnswer.contains("3")) {
+            System.out.println("Классно пообщались, пока пока");
+
+        }
+        return userAnswer;
     }
+
 }
