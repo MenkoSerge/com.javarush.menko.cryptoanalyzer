@@ -1,4 +1,4 @@
-package Commands;
+package FileManager;
 
 import java.io.FileWriter;
 import java.io.IOException;
