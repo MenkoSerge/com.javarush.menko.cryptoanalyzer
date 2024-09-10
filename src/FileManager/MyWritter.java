@@ -18,7 +18,7 @@ public class MyWritter {
             String textToWrite= text.toString();
             fileWriter.write(textToWrite);
         } catch (IOException e) {
-            System.out.println("Что то пошло не так");
+            System.out.println("Что то  не так");
         }
 
     }

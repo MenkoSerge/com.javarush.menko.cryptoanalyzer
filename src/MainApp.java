@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 //
 
-// /Users/nordnexsp.zo.o.nippl9522215738/Desktop/File.txt
-// /Users/nordnexsp.zo.o.nippl9522215738/Desktop/result.txt
+
 
 
 public static void main(String[] args) {
@@ -41,16 +40,16 @@ public static void main(String[] args) {
 private static int getUserChoice(Scanner console) {
     while (!console.hasNextInt()) {
         System.out.println("Пожалуйста, введите 1, 2 или 3:");
-        console.next(); // Пропускаем некорректный ввод
+        console.next();
     }
     int choice = console.nextInt();
-    console.nextLine(); // Поглощаем символ новой строки после ввода числа
+    console.nextLine();
     return choice;
 }
 
 private static void encodeFile(Scanner console) {
     String inputFile = getValidInput(console, "Пришли мне ссылку на файл в формате С:/folder/file.txt");
-    String outputFile = getValidInput(console, "Пришли ссылку куда мы будем сохранять?");
+    String outputFile = getValidInput(console, "Пришли ссылку на файл в формате С:/folder/result.txt");
     int key = getIntInputFromUser(console, "Пришли ключ шифрования (целое число):");
 
     try {
@@ -65,8 +64,8 @@ private static void encodeFile(Scanner console) {
 }
 
 private static void decodeFile(Scanner console) {
-    String inputFile = getValidInput(console, "Пришли мне ссылку на файл для дешифровки:");
-    String outputFile = getValidInput(console, "Пришли ссылку ссылку на файл в формате С:/folder/result.txt");
+    String inputFile = getValidInput(console, "Пришли мне ссылку на файл для дешифровки в формате С:/folder/file.txt");
+    String outputFile = getValidInput(console, "Пришли ссылку  на файл в формате С:/folder/result.txt");
     int key = getIntInputFromUser(console, "Пришли ключ для дешифрования (целое число):");
 
     try {
@@ -96,9 +95,9 @@ private static int getIntInputFromUser(Scanner console, String message) {
     System.out.println(message);
     while (!console.hasNextInt()) {
         System.out.println("Пожалуйста, введите число:");
-        console.next(); // Пропускаем некорректный ввод
+        console.next();
     }
     int input = console.nextInt();
-    console.nextLine(); // Поглощаем символ новой строки после ввода числа
+    console.nextLine();
     return input;
 }

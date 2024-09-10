@@ -10,17 +10,17 @@ public class Encoder {
         int alphabetLength = Alphabet.ALPHABET.length;
 
         for (char symbol : source) {
-            boolean isEncoded = false; // Флаг для проверки, найден ли символ в алфавите
+            boolean isEncoded = false;
             for (int j = 0; j < alphabetLength; j++) {
                 if (symbol == Alphabet.ALPHABET[j]) {
-                    // Сдвиг вправо на заданный ключ, с учетом циклического сдвига
+
                     int newIndex = (j + key) % alphabetLength;
                     encodedText.add(Alphabet.ALPHABET[newIndex]);
                     isEncoded = true;
                     break;
                 }
             }
-            // Если символ не найден в алфавите, добавляем его без изменений
+
             if (!isEncoded) {
                 encodedText.add(symbol);
             }
